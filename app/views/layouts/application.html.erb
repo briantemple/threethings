@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Threethings</title>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div id="frame">
+      <div id="nav">
+        <div class="title"><%= link_to('Three Things', root_path) %></div>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <% if user_signed_in? %>
+            <li><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></li>
+          <% else %>
+            <li><%= link_to('Login', '/users/auth/facebook')  %></li>
+            <!-- <%= link_to(image_tag("http://static.ak.fbcdn.net/rsrc.php/v1/yc/r/bGxF25CxBsQ.gif"), '/users/auth/facebook', :id => 'login')  %>  -->
+      	<% end %>
+        </ul>
+        <div class="clear"></div>
+      </div>
+
+      <p class="alert clear"><%= alert %></p>
+
+      <%= yield %>
+
+    </div>
+  </body>
+</html>

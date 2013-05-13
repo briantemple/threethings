@@ -1,0 +1,6 @@
+<% if @task: %>
+  <input type="checkbox" id="checkbox_<%= @task.get('id') %>" value="1"/>
+  <div class="editable" id="text_<%= @task.get('id') %>"><%= @task.get('name') %></div>
+<% else: %>
+  <div id="<%= @id %>" class="editable new_task">Click to add a task</div>
+<% end %>

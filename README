@@ -1,0 +1,26 @@
+== Three Things
+
+Three things is a personal daily task manager.
+Think of it as a place to track "What do I need to do today to consider today a success?", not to track everything you have to do.
+Three things are not overwhelming. Three things are doable. Get started now!
+
+== Installation
+
+* Install gem dependencies
+bundle install
+
+* Create Facebook app to authenticate against at http://developers.facebook.com/
+
+* Update secret environment variable file (Facebook key/secret found in )
+echo "export THREETHINGS_SECRET_KEY_BASE="`rake secret` > threethings.env
+echo "export THREETHINGS_APP_ID=" >> threethings.env
+echo "export THREETHINGS_APP_SECRET=" >> threethings.env
+. threethings.env
+
+== Contact
+
+Brian Temple <brian@briantemple.com>
+
+== License
+
+Three Things is released under the MIT license.

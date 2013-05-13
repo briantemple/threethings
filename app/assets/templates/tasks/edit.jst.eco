@@ -1,0 +1,1 @@
+<textarea id="<%= @id %>" class="edit_task" rows="2"><%= @value %></textarea>
